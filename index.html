@@ -1,0 +1,88 @@
+<html>
+  <head>
+    <title>WeatherScape</title>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1'>
+    <script type='text/javascript' src='lib/jquery-3.6.0.min.js'></script>
+    <script type='text/javascript' src='lib/jquery-ui.min.js'></script>
+    <script src='data/geodata-db.js' type='text/javascript'></script>
+    <script src='classes/geodata.js' type='text/javascript'></script>
+    <script src='classes/carousel.js' type='text/javascript'></script>
+    <script src='classes/nws_api.js' type='text/javascript'></script>
+    <script src='weatherscape.js' type='text/javascript'></script>  
+    <link rel='stylesheet' href='style/lib/bootstrap-4.6.0.min.css'>
+    <link rel='stylesheet' href='style/lib/jquery-ui.css'>
+    <link rel='stylesheet' href='lib/3d-carousel/3d-carousel.css'>
+    <link rel='stylesheet' href='style/style.css'>
+  </head>
+
+  <body>
+    <div class='container-fluid'>
+      <div id='locationRow' class='row justify-content-center'>
+        <div class='col-10 col-md-8 col-lg-6 p-0'>
+          <div class='form-group'>
+            <label class='pt-2'>Location:</label>
+            <input type='text' class='form-control input' id='location' placeholder='Enter Location (City or Zipcode)'>
+            <div id='empty-message'></div>
+          </div>
+        </div>
+      </div>
+
+      <div class='row justify-content-center'>
+        <div id='center-div' class='col-12 col-md-10 col-lg-8'>
+          <div class='carouselContainer'>
+            <div id='drag-container-day' class='drag-container' style='z-index: 3;display:none;'>
+              <div id='spin-container-day' class='spin-container' style='z-index: 3;display:none;'>
+                <img id='dayOne' src='' alt=''>
+                <img id='dayTwo' src='' alt=''>
+                <img id='dayThree' src='' alt=''>
+                <img id='dayFour' src='' alt=''>
+                <img id='dayFive' src='' alt=''>
+                <img id='daySix' src='' alt=''>
+                <img id='daySeven' src='' alt=''>
+              </div>
+            </div>
+            <div id='drag-container-night' class='drag-container' style='z-index: 2;display:none;'>
+              <div id='spin-container-night' class='spin-container' style='z-index: 2;display:none;'>
+                <img id='nightOne' src='' alt=''>
+                <img id='nightTwo' src='' alt=''>
+                <img id='nightThree' src='' alt=''>
+                <img id='nightFour' src='' alt=''>
+                <img id='nightFive' src='' alt=''>
+                <img id='nightSix' src='' alt=''>
+                <img id='nightSeven' src='' alt=''>
+              </div>
+            </div>
+            <div id='drag-container-text' class='drag-container' style='z-index: 1;display:none;'>
+              <div id='spin-container-text' class='spin-container'  style='z-index: 1;display:none;'>
+                <img-text id='textOne' class='holder-text'></img-text>
+                <img-text id='textTwo' class='holder-text'></img-text>
+                <img-text id='textThree' class='holder-text'></img-text>
+                <img-text id='textFour' class='holder-text'></img-text>
+                <img-text id='textFive' class='holder-text'></img-text>
+                <img-text id='textSix' class='holder-text'></img-text>
+                <img-text id='textSeven' class='holder-text'></img-text>
+              </div>
+            </div>
+          </div>
+        
+          <div id='info-message' class='d-flex justify-content-center align-items-center'></div>
+          <div id='ground' class='d-block'></div>
+        </div>
+      </div>
+  
+      <div class='row justify-content-center'>
+        <div id='updated-message'></div>
+      </div>
+
+      <!-- Options Modal - Not Implemented. -->
+      <div id='myModal' class='modal'>
+        <div class='modal-content'>
+          <span class='close'>&times;</span>
+          <p>Some text in the Modal..</p>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src='lib/3d-carousel/3d-carousel.js' type='text/javascript'></script>
+</html>

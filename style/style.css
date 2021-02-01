@@ -1,0 +1,70 @@
+body {
+  color: #43474B;
+}
+
+.container-fluid {
+  background-color: black;
+  text-align: center;
+}
+
+.input {
+  text-align: center;
+  color: #212529;
+}
+
+.carouselContainer {
+  margin-top: 10vh;
+}
+
+.holder-text {
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  font-size: 3vmin;
+  position: absolute;
+  height: auto;
+  width: 100%;
+  margin: 0 auto;
+  padding: 3.5%;
+  border: solid 1px white;
+  background: #111;
+  color: #F0F0F0;
+}
+
+#location {
+  width: 60vmin;
+  height: 8vmin;
+  max-width: 400px;
+  max-height: 38px;
+  margin: auto;
+}
+
+#info-message {
+  height: 45vmin;
+  font-size: 8vmin;
+  contain: content;
+}
+
+#empty-message {
+  font-size: 18px;
+  padding-top: .25rem !important;
+}
+
+#updated-message {
+  height: auto;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 7px;
+  contain: content;
+  font-size: 2.5vmin;
+}
+
+#locationRow label {
+  font-size: min(4vmin, 22px);
+}
+
+.ui-autocomplete-input .ui-autocomplete .ui-menu .ui-menu-item {
+  color: black;
+  background-color: black;
+  background: black;
+}
